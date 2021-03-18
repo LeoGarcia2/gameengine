@@ -17,7 +17,7 @@ export default class SceneManager
 
     animate = () => {
 
-        if (this.cameraManager?.mainCamera) {
+        if ( this.cameraManager?.mainCamera ) {
 
             requestAnimationFrame( this.animate );
             this.renderer.render( this.scene, this.cameraManager.mainCamera );
