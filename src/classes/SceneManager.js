@@ -11,7 +11,7 @@ export default class SceneManager
 
         this.renderer.setSize( width, height );
 
-        document.body.appendChild( this.renderer.domElement );
+        document.getElementById( 'canvas' ).appendChild( this.renderer.domElement );
 
     }
 
@@ -20,6 +20,9 @@ export default class SceneManager
         if ( this.cameraManager?.mainCamera ) {
 
             requestAnimationFrame( this.animate );
+
+            this.movementManager.animate();
+
             this.renderer.render( this.scene, this.cameraManager.mainCamera );
 
         }
